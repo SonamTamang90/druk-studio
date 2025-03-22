@@ -6,9 +6,9 @@ import { Menu as HeadlessMenu, Transition } from "@headlessui/react";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 
 const links = [
-  { href: "/work", label: "WORK" },
-  { href: "/services", label: "SERVICES" },
+  // { href: "/services", label: "SERVICES" },
   { href: "/about", label: "ABOUT" },
+  { href: "/templates", label: "TEMPLATES" },
   { href: "/testimonials", label: "TESTIMONIALS" },
   { href: "/request-a-quote", label: "REQUEST A QUOTE" },
 ];
@@ -27,12 +27,14 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 flex justify-center px-4 pt-4 ${
-        isScrolled ? "bg-black/50 backdrop-blur-sm" : ""
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 flex justify-center px-4 pt-4 `}
     >
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center justify-center border border-[#D9D9D9]/15 rounded-md px-6 py-3 bg-transparent backdrop-blur-sm">
+      <div
+        className={`hidden md:flex items-center justify-center border border-[#D9D9D9]/15 rounded-md px-6 py-3 bg-transparent ${
+          isScrolled ? "backdrop-blur-sm" : ""
+        }`}
+      >
         <ul className="flex items-center space-x-8">
           {links.map((link) => (
             <li key={link.href}>

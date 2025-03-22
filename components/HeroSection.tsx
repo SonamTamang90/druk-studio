@@ -8,16 +8,23 @@ const HeroSection = () => {
       className="relative w-full h-screen overflow-hidden bg-black"
       aria-labelledby="hero-heading"
     >
+      <div
+        className="absolute inset-0 z-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: "repeat",
+        }}
+      />
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.png"
+          src="/images/hero-one.png"
           alt="Background design"
           fill
           priority
           quality={85}
           sizes="100vw"
-          className="object-cover opacity-90"
+          className="object-cover opacity-70 grayscale"
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
         />
@@ -38,7 +45,7 @@ const HeroSection = () => {
           id="hero-heading"
           className="max-w-3xl mb-4 text-4xl font-bold text-center sm:text-5xl md:text-6xl uppercase tracking-wider"
         >
-          Druk Studio
+          Druk Web Design Studio
         </h1>
         <p className="max-w-md mb-10 text-base text-center sm:text-lg md:text-base opacity-90">
           We craft digital experiences with clean code and smart design,
