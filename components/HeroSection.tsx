@@ -1,0 +1,70 @@
+import Navigation from "./Navigation";
+import Image from "next/image";
+import Link from "next/link";
+
+const HeroSection = () => {
+  return (
+    <section
+      className="relative w-full h-screen overflow-hidden bg-black"
+      aria-labelledby="hero-heading"
+    >
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero.png"
+          alt="Background design"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover opacity-90"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+        />
+      </div>
+
+      {/* Decorative grid lines */}
+      <div className="absolute inset-0 z-0 grid">
+        <div className="absolute top-8 md:top-20 w-full h-px bg-[#D9D9D9]/15" />
+        <div className="absolute left-8 md:left-20 w-px h-full bg-[#D9D9D9]/15" />
+        <div className="absolute right-8 md:right-20 w-px h-full bg-[#D9D9D9]/15" />
+      </div>
+
+      <Navigation />
+
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-white">
+        <h1
+          id="hero-heading"
+          className="max-w-3xl mb-4 text-4xl font-bold text-center sm:text-5xl md:text-6xl uppercase tracking-wider"
+        >
+          Druk Studio
+        </h1>
+        <p className="max-w-md mb-10 text-base text-center sm:text-lg md:text-base opacity-90">
+          We craft digital experiences with clean code and smart design,
+          building interfaces that reach millions.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col items-center gap-4 sm:flex-row">
+          <Link
+            href="/book-call"
+            className="inline-flex items-center text-sm font-semibold justify-center px-6 py-3 text-black transition-all duration-300 bg-[#FFFFA9] rounded-md hover:bg-yellow-400 hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+            aria-label="Book a call with our team"
+          >
+            BOOK A CALL
+          </Link>
+          <Link
+            href="/our-work"
+            className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-300 bg-[#1E1E1E] border border-[#414146] rounded-md hover:bg-zinc-700 hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2"
+            aria-label="View our work portfolio"
+          >
+            OUR WORK
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
