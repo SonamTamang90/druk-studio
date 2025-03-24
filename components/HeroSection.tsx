@@ -30,15 +30,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Decorative grid lines */}
-      <div className="absolute inset-0 z-0 grid">
-        <div className="absolute top-8 md:top-20 w-full h-px bg-[#D9D9D9]/15" />
-        <div className="absolute left-8 md:left-20 w-px h-full bg-[#D9D9D9]/15" />
-        <div className="absolute right-8 md:right-20 w-px h-full bg-[#D9D9D9]/15" />
-      </div>
-
-      {/* <Navigation /> */}
-
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-white">
         <h1

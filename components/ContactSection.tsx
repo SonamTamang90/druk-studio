@@ -74,12 +74,6 @@ const ContactSection = () => {
           }}
         />
 
-        {/* Decorative grid lines */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute left-8  md:left-20 w-px h-full bg-[#D9D9D9]/10" />
-          <div className="absolute right-8  md:right-20 w-px h-full bg-[#D9D9D9]/10" />
-        </div>
-
         {/* Main content */}
         <div className="relative mx-auto px-4 sm:px-6 md:px-24 flex flex-col items-center">
           <h2 className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-white text-lg sm:text-xl md:text-2xl uppercase font-semibold tracking-wide text-center mb-8 md:mb-11">

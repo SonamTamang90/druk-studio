@@ -6,6 +6,7 @@ import { Menu as HeadlessMenu, Transition } from "@headlessui/react";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 
 const links = [
+  { href: "/", label: "HOME" },
   { href: "/about", label: "ABOUT" },
   { href: "/templates", label: "TEMPLATES" },
   // { href: "/blogs", label: "BLOGS" },
