@@ -27,7 +27,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-[#0F0F0F] text-white overflow-hidden">
+    <section className="relative py-12 lg:py-24 bg-[#0F0F0F] text-white overflow-hidden">
       <div
         className="absolute inset-0 z-0 opacity-[0.03]"
         style={{

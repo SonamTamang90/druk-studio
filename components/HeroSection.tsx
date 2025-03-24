@@ -5,7 +5,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section
-      className="relative w-full h-screen overflow-hidden bg-black"
+      className="relative w-full h-[60vh] lg:h-screen overflow-hidden bg-black"
       aria-labelledby="hero-heading"
     >
       <div
@@ -37,7 +37,7 @@ const HeroSection = () => {
         <div className="absolute right-8 md:right-20 w-px h-full bg-[#D9D9D9]/15" />
       </div>
 
-      <Navigation />
+      {/* <Navigation /> */}
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-white">

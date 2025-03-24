@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const FeaturedSection = () => {
@@ -50,7 +51,7 @@ const FeaturedSection = () => {
   ];
 
   return (
-    <section className="relative lg:pb-24 bg-[#0F0F0F]">
+    <section className="relative pb-12 lg:pb-24 bg-[#0F0F0F]">
       {/* Noise Background */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03]"
@@ -68,28 +69,46 @@ const FeaturedSection = () => {
         <div className="absolute right-8 md:right-20 w-px h-full bg-[#D9D9D9]/10" />
       </div>
 
-      <h2 className="relative text-2xl border-b border-[#D9D9D9]/10  uppercase font-semibold text-center text-white tracking-wide  py-20">
+      <h2 className="relative text-2xl border-b border-[#D9D9D9]/10  uppercase font-semibold text-center text-white tracking-wide py-12  lg:py-20">
         ❤️ Popular Templates
       </h2>
 
       <div className="relative mx-auto px-8 md:px-20 ">
+        <div className="absolute inset-0">
+          <div className="absolute z-10 -top-0.5 left-8 md:left-[78.5px] w-[4px] h-[4px] bg-white transform -rotate-45" />
+          <div className="absolute z-10 -top-0.5 right-8 md:right-[78.5px] w-[4px] h-[4px] bg-white transform -rotate-45" />
+          <div className="absolute z-10 -bottom-0.5 left-8 md:left-[78.5px] w-[4px] h-[4px] bg-white transform -rotate-45" />
+          <div className="absolute z-10 -bottom-0.5 right-8 md:right-[78.5px] w-[4px] h-[4px] bg-white transform -rotate-45" />
+        </div>
+
         <div className="grid md:grid-cols-2 gap-0 bg-[#d9d9d90d]">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
               className={`relative p-8 border-b border-[#D9D9D9]/10 ${
                 index % 2 === 0 ? "border-r border-[#D9D9D9]/10" : ""
-              }`}
+              } group`}
             >
-              <div className="relative aspect-video w-full overflow-hidden bg-gray-900/20">
+              <div className="relative aspect-video w-full overflow-hidden rounded-md group-hover:shadow-lg transition-all duration-300">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority={project.id === 1}
                 />
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Buy Now Button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <button
+                    className="px-6 py-2 bg-white text-gray-900 font-semibold rounded-md transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 hover:bg-gray-100"
+                    aria-label={`Buy ${project.title} now for ${project.price}`}
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
 
               <div className="text-white mt-6 pb-4">
@@ -108,6 +127,13 @@ const FeaturedSection = () => {
           ))}
         </div>
       </div>
+
+      <Link
+        href="/templates"
+        className="mt-12 mx-auto block w-fit px-6 py-3 bg-white/5 hover:bg-white/10 text-white rounded-md transition-colors duration-300 text-center focus:outline-none focus:ring-2 focus:ring-white/20"
+      >
+        View all templates
+      </Link>
     </section>
   );
 };

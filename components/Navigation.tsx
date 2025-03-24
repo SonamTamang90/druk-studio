@@ -6,11 +6,11 @@ import { Menu as HeadlessMenu, Transition } from "@headlessui/react";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 
 const links = [
-  // { href: "/services", label: "SERVICES" },
   { href: "/about", label: "ABOUT" },
   { href: "/templates", label: "TEMPLATES" },
+  // { href: "/blogs", label: "BLOGS" },
   { href: "/testimonials", label: "TESTIMONIALS" },
-  { href: "/request-a-quote", label: "REQUEST A QUOTE" },
+  { href: "/buy-templates", label: "BUY TEMPLATES" },
 ];
 
 const Navigation = () => {
