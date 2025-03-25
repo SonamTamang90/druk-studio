@@ -1,4 +1,3 @@
-import Navigation from "./Navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +7,7 @@ const HeroSection = () => {
       className="relative w-full h-[60vh] lg:h-screen overflow-hidden bg-black"
       aria-labelledby="hero-heading"
     >
+      {/* <div className="absolute top-8 md:top-20 w-full z-10 h-px bg-[#D9D9D9]/15" /> */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03]"
         style={{
@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-one.png"
+          src="/images/bg.png"
           alt="Background design"
           fill
           priority

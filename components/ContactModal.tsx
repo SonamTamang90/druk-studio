@@ -150,7 +150,7 @@ const ContactModal = ({ isOpen, closeModal }) => {
 
                     <div className="mb-4">
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        How can I help u?
+                        How can we help u?
                       </label>
                       <div className="flex flex-wrap gap-2">
                         <button

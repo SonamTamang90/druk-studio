@@ -27,11 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         {/* Decorative grid lines */}
-        <div className="grid fixed inset-0">
-          <div className="fixed top-8 md:top-20 w-full h-px bg-[#D9D9D9]/15" />
-          <div className="fixed left-8 md:left-20 w-px h-full bg-[#D9D9D9]/15" />
-          <div className="fixed right-8 md:right-20 w-px h-full bg-[#D9D9D9]/15" />
-        </div>
+
+        <div className="fixed left-8 md:left-20 w-px h-full z-10 bg-[#D9D9D9]/15" />
+        <div className="fixed right-8 md:right-20 w-px h-full z-10 bg-[#D9D9D9]/15" />
 
         <Navigation />
         {children}

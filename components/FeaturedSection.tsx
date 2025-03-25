@@ -71,7 +71,7 @@ const FeaturedSection = () => {
         ❤️ Popular Templates
       </h2>
 
-      <div className="relative mx-auto px-8 md:px-20">
+      <div className="relative mx-auto px-8 md:px-20 ">
         <div className="absolute inset-0">
           <div className="absolute z-10 -top-0.5 left-8 md:left-[78.5px] w-[4px] h-[4px] bg-white transform -rotate-45" />
           <div className="absolute z-10 -top-0.5 right-8 md:right-[78.5px] w-[4px] h-[4px] bg-white transform -rotate-45" />
