@@ -36,11 +36,11 @@ const HeroSection = () => {
           id="hero-heading"
           className="max-w-3xl mb-4 text-4xl font-bold text-center sm:text-5xl md:text-6xl uppercase tracking-wider"
         >
-          Druk Web Design Studio
+          Druk Digital
         </h1>
         <p className="max-w-md mb-10 text-base text-center sm:text-lg md:text-base opacity-90">
-          We craft digital experiences with clean code and smart design,
-          building interfaces that reach millions.
+          We craft precision components and tailored templates that power
+          exceptional digital experiences.
         </p>
 
         {/* CTA Buttons */}
@@ -50,14 +50,14 @@ const HeroSection = () => {
             className="inline-flex items-center text-sm font-semibold justify-center px-6 py-3 text-black transition-all duration-300 bg-[#FFFFA9] rounded-md hover:bg-yellow-400 hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
             aria-label="Book a call with our team"
           >
-            BOOK A CALL
+            Purchase Template
           </Link>
           <Link
             href="/our-work"
             className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-300 bg-[#1E1E1E] border border-[#414146] rounded-md hover:bg-zinc-700 hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2"
             aria-label="View our work portfolio"
           >
-            OUR WORK
+            Browse Templates
           </Link>
         </div>
       </div>

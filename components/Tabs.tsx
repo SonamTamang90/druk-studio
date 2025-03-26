@@ -52,15 +52,9 @@ const tabData = [
     ],
   },
   {
-    name: "Ecommerce",
+    name: "Blogging",
     items: [
       // Ecommerce tab content would go here
-    ],
-  },
-  {
-    name: "Restaurant",
-    items: [
-      // Restaurant tab content would go here
     ],
   },
 ];
