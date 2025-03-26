@@ -11,7 +11,6 @@ const links = [
   { href: "/ui-blocks", label: "UI BLOCKS" },
   { href: "/templates", label: "TEMPLATES" },
   { href: "/testimonials", label: "TESTIMONIALS" },
-  { href: "/get-full-access", label: "GET FULL ACCESS" },
 ];
 
 const Navigation = () => {
@@ -47,6 +46,14 @@ const Navigation = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href="/get-full-access"
+              className="inline-block p-2 rounded-md text-xs font-semibold bg-gradient-to-b from-[#D7D794] to-[#F6FF7F] transition-colors duration-200"
+            >
+              GET FULL ACCESS
+            </Link>
+          </li>
         </ul>
       </div>
 
