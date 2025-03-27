@@ -17,8 +17,8 @@ const Banner = ({ title, description }: BannerProps) => {
 
           <div className="flex items-center gap-8 divider-x">
             <p className="flex flex-col gap-1">
-              <span className="text-xl font-bold text-white">50+</span>{" "}
-              <span className="text-xs uppercase text-white/70">Templates</span>
+              <span className="text-xl font-bold text-white">Production</span>{" "}
+              <span className="text-xs uppercase text-white/70">Ready</span>
             </p>
             <p className="flex flex-col gap-1">
               <span className="text-xl font-bold text-white">100%</span>
