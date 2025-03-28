@@ -3,9 +3,9 @@ import { Infinity, Users } from "lucide-react";
 
 const PricingSection = () => {
   return (
-    <div className="flex items-center justify-center px-6 pb-32">
+    <div className="flex items-center justify-center px-6">
       <div className="max-w-6xl w-full mx-auto">
-        <h2 className="text-xl text-center md:text-2xl uppercase font-semibold text-white tracking-wide pt-32 pb-24">
+        <h2 className="text-xl text-center md:text-2xl uppercase font-semibold text-white tracking-wide  py-24">
           Choose the plan that's right for you
         </h2>
 

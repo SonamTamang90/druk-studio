@@ -7,10 +7,12 @@ import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 
 const links = [
   { href: "/", label: "HOME" },
-  { href: "/about", label: "ABOUT" },
+  // { href: "/about", label: "ABOUT" },
   { href: "/ui-blocks", label: "UI BLOCKS" },
   { href: "/templates", label: "TEMPLATES" },
-  { href: "/testimonials", label: "TESTIMONIALS" },
+  { href: "/sign-in", label: "SIGN IN" },
+
+  // { href: "/testimonials", label: "TESTIMONIALS" },
 ];
 
 const Navigation = () => {
