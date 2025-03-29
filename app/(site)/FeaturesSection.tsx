@@ -24,17 +24,17 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-11 lg:py-24">
+    <section className="py-11 lg:pt-24">
       <div className="max-w-7xl px-16">
         {/* section heading */}
         <div className="mb-11 max-w-xl">
-          <p className="mb-1 text-xs font-semibold text-[#FFFFA9] uppercase">
+          <p className="text-brand mb-1 text-xs font-semibold uppercase">
             UI Components
           </p>
           <h2 className="mb-6 font-bold tracking-wide text-white lg:text-4xl">
             Beautiful design UI components, built for real-world projects.
           </h2>
-          <p className="text-[#CFCFCF]">
+          <p className="text-gray-300">
             A library of professionally designed, expertly crafted components
             you can seamlessly integrate into your projects and customize to
             perfection.
@@ -43,7 +43,7 @@ const FeaturesSection = () => {
         {/* /section heading end here */}
       </div>
       {/* Features showcase */}
-      <div className="border-y border-[#D9D9D9]/5">
+      <div className="border-y border-gray-100/5">
         <div className="max-w-7xl px-11">
           <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => {
@@ -53,10 +53,10 @@ const FeaturesSection = () => {
 
               // Apply borders based on position
               const borderClasses = isFirstColumn
-                ? "lg:border-r lg:border-[#D9D9D9]/5" // First column: only right border
+                ? "lg:border-r lg:border-gray-100/5" // First column: only right border
                 : isLastColumn
-                  ? "lg:border-l lg:border-[#D9D9D9]/5" // Last column: only left border
-                  : "lg:border-l lg:border-r border-[#D9D9D9]/5"; // Middle column: both borders
+                  ? "lg:border-l lg:border-gray-100/5" // Last column: only left border
+                  : "lg:border-l lg:border-r border-gray-100/5"; // Middle column: both borders
 
               return (
                 <li key={feature.id} className={`p-6 ${borderClasses}`}>
@@ -65,14 +65,12 @@ const FeaturesSection = () => {
                       {feature.letter}
                     </span>
                     <div className="absolute bottom-2.5 left-5">
-                      <h3 className="text-sm font-semibold text-[#CFCFCF] uppercase">
+                      <h3 className="text-sm font-semibold text-gray-300 uppercase">
                         {feature.label}
                       </h3>
                     </div>
                   </div>
-                  <p className="text-sm text-[#CFCFCF]">
-                    {feature.description}
-                  </p>
+                  <p className="text-sm text-gray-300">{feature.description}</p>
                 </li>
               );
             })}

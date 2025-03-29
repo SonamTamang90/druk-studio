@@ -13,15 +13,15 @@ const HeroSection = () => {
             Ship your idea even faster
           </h1>
           <p className="text-base text-[#CFCFCF] md:text-lg lg:px-11">
-            We craft beautifully designed UI components and tailored templates
-            that power exceptional digital experiences.
+            We craft beautiful UI components and ready-made templates that power
+            exceptional digital experiences.
           </p>
         </div>
         {/* /Hero text end here */}
         <div className="mt-11 flex items-center justify-center gap-6">
           <Link
             href="/ui-blocks"
-            className="inline-block rounded-md bg-[#FFFFA9] px-6 py-3 text-sm font-semibold"
+            className="bg-brand inline-block rounded-md px-6 py-3 text-sm font-semibold"
           >
             Browse UI Blocks
           </Link>
