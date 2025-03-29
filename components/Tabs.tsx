@@ -1,6 +1,6 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import React from "react";
-import Container from "./Container";
+import Container from "./ui/Container";
 import Image from "next/image";
 
 const tabData = [
@@ -76,28 +76,28 @@ const Tabs = () => {
     <div className="">
       <TabGroup>
         <Container>
-          <TabList className="flex items-center justify-center gap-4 md:gap-8 overscroll-x-autoauto lg:py-11">
+          <TabList className="overscroll-x-autoauto flex items-center justify-center gap-4 md:gap-8 lg:py-11">
             {tabData.map((tab) => (
               <Tab
                 key={tab.name}
-                className="text-white border border-[#D9D9D9]/15 text-xs uppercase py-2 px-4 rounded-full focus:outline-none cursor-pointer data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white"
+                className="cursor-pointer rounded-full border border-[#D9D9D9]/15 px-4 py-2 text-xs text-white uppercase focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10"
               >
                 {tab.name}
               </Tab>
             ))}
           </TabList>
         </Container>
-        <div className="max-w-7xl mx-auto lg:px-11">
+        <div className="mx-auto max-w-7xl lg:px-11">
           <TabPanels className="">
             {tabData.map((tab, index) => (
               <TabPanel key={index}>
-                <ul className="grid grid-cols-1 md:grid-cols-1 -mx-px">
+                <ul className="-mx-px grid grid-cols-1 md:grid-cols-1">
                   {tab.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="flex gap-6 border-b border-[#D9D9D9]/10 overflow-hidden group cursor-pointer"
+                      className="group flex cursor-pointer gap-6 overflow-hidden border-b border-[#D9D9D9]/10"
                     >
-                      <div className="py-6 pl-6 border-r pr-6 border-[#D9D9D9]/10">
+                      <div className="border-r border-[#D9D9D9]/10 py-6 pr-6 pl-6">
                         <div className="relative h-72 w-96">
                           <Image
                             src={item.image}
@@ -109,22 +109,22 @@ const Tabs = () => {
                         </div>
                       </div>
 
-                      <div className="flex-1 flex flex-col justify-between gap-11 items-start py-6 border-l border-[#D9D9D9]/10">
+                      <div className="flex flex-1 flex-col items-start justify-between gap-11 border-l border-[#D9D9D9]/10 py-6">
                         <div className="pl-6">
                           <h3 className="mb-2 text-white">{item.title}</h3>
                           <p className="text-sm text-zinc-400">
                             {item.category}
                           </p>
-                          <p className="text-zinc-400 max-w-md text-sm my-6">
+                          <p className="my-6 max-w-md text-sm text-zinc-400">
                             {item.description}
                           </p>
                           <div>
-                            <h3 className="text-white text-sm uppercase font-semibold mb-4">
+                            <h3 className="mb-4 text-sm font-semibold text-white uppercase">
                               Includes
                             </h3>
                             <div className="grid grid-cols-3 gap-y-6">
                               <p className="text-sm">
-                                <span className="text-white font-semibold">
+                                <span className="font-semibold text-white">
                                   {item.pages}
                                 </span>{" "}
                                 <span className="text-white/90">Pages</span>
@@ -132,9 +132,9 @@ const Tabs = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="border-t border-[#D9D9D9]/10 w-full pt-6 pl-6">
+                        <div className="w-full border-t border-[#D9D9D9]/10 pt-6 pl-6">
                           <p className="space-x-2">
-                            <span className="text-xl text-white font-bold">
+                            <span className="text-xl font-bold text-white">
                               {item.originalPrice}
                             </span>
                             <span className="text-sm text-zinc-400">

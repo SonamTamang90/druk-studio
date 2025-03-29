@@ -31,7 +31,6 @@ export default function RootLayout({
         {/* Decorative grid lines */}
         <div className="fixed left-8 z-10 h-full w-px bg-[#D9D9D9]/15 md:left-11" />
         <div className="fixed right-8 z-10 h-full w-px bg-[#D9D9D9]/15 md:right-11" />
-        <Navbar />
         <main>{children}</main>
       </body>
     </html>
