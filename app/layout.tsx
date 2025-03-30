@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,9 +30,11 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} min-h-screen bg-[#0F0F0F] antialiased`}
       >
         {/* Decorative grid lines */}
-        <div className="fixed left-8 z-10 h-full w-px bg-[#D9D9D9]/15 md:left-11" />
-        <div className="fixed right-8 z-10 h-full w-px bg-[#D9D9D9]/15 md:right-11" />
+        <div className="bg-neutrals-100/5 fixed left-8 z-10 h-full w-px md:left-11" />
+        <div className="bg-neutrals-100/5 fixed right-8 z-10 h-full w-px md:right-11" />
+        <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

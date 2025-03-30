@@ -6,6 +6,9 @@ const Hero: React.FC = () => {
     <section className="h-screen bg-[url(/images/hero-bg.png)] bg-cover bg-center">
       <Container>
         <div className="flex h-full flex-col items-center justify-center">
+          <div className="mb-1 rounded-full border border-white/15 px-1.5 py-1">
+            <p className="text-xs text-zinc-200">Made by Druk Digital</p>
+          </div>
           <h1 className="max-w-lg text-center text-5xl font-extrabold tracking-wide text-white lg:text-7xl">
             Ship design even faster
           </h1>
@@ -13,7 +16,7 @@ const Hero: React.FC = () => {
             Our comprehensive toolkit helps developers build stunning interfaces
             and websites in record time.
           </p>
-          <div className="mt-11 flex items-center gap-6">
+          <div className="mt-11 flex flex-wrap items-center justify-center gap-6 md:flex-nowrap">
             <Link
               href="/ui-blocks"
               className="bg-brand rounded-md px-6 py-3 text-sm"
@@ -35,9 +38,9 @@ const Hero: React.FC = () => {
 
 const Features: React.FC = () => {
   return (
-    <section className="lg:py-24">
+    <section className="py-11 lg:py-24">
       <Container>
-        <h2 className="max-w-md font-semibold text-white lg:text-3xl">
+        <h2 className="max-w-md text-xl font-semibold text-white lg:text-3xl">
           Professional UI Components Built for Real-World Success
         </h2>
         <p className="mt-6 max-w-md text-zinc-400">

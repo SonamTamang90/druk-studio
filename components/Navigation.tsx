@@ -11,8 +11,6 @@ const links = [
   { href: "/ui-blocks", label: "UI BLOCKS" },
   { href: "/templates", label: "TEMPLATES" },
   { href: "/sign-in", label: "SIGN IN" },
-
-  // { href: "/testimonials", label: "TESTIMONIALS" },
 ];
 
 const Navigation = () => {
@@ -29,11 +27,11 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 flex justify-center px-4 pt-4 `}
+      className={`fixed top-0 left-0 z-50 flex w-full justify-center px-4 pt-4`}
     >
       {/* Desktop Navigation */}
       <div
-        className={`hidden md:flex items-center justify-center border border-[#D9D9D9]/15 rounded-md px-6 py-3 bg-transparent ${
+        className={`hidden items-center justify-center rounded-md border border-[#D9D9D9]/15 bg-transparent px-6 py-3 md:flex ${
           isScrolled ? "backdrop-blur-sm" : ""
         }`}
       >
@@ -42,7 +40,7 @@ const Navigation = () => {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-xs font-semibold text-white hover:text-yellow-200 transition-colors duration-200"
+                className="text-xs font-semibold text-white transition-colors duration-200 hover:text-yellow-200"
               >
                 {link.label}
               </Link>
@@ -51,7 +49,7 @@ const Navigation = () => {
           <li>
             <Link
               href="/get-full-access"
-              className="inline-block p-2 rounded-md text-xs font-semibold bg-gradient-to-b from-[#D7D794] to-[#F6FF7F] transition-colors duration-200"
+              className="inline-block rounded-md bg-gradient-to-b from-[#D7D794] to-[#F6FF7F] p-2 text-xs font-semibold transition-colors duration-200"
             >
               GET FULL ACCESS
             </Link>
@@ -60,11 +58,11 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden w-full flex justify-end">
+      <div className="flex w-full justify-end md:hidden">
         <HeadlessMenu as="div" className="relative">
           {({ open }) => (
             <>
-              <HeadlessMenu.Button className="p-2 rounded-md text-white hover:bg-gray-800/50 transition-colors">
+              <HeadlessMenu.Button className="rounded-md p-2 text-white transition-colors hover:bg-gray-800/50">
                 {open ? (
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 ) : (
@@ -82,14 +80,14 @@ const Navigation = () => {
               >
                 <HeadlessMenu.Items
                   static
-                  className="absolute right-0 mt-2 w-48 origin-top-right bg-black/90 backdrop-blur-md border border-white/20 rounded-md shadow-lg p-2"
+                  className="absolute right-0 mt-2 w-48 origin-top-right rounded-md border border-white/20 bg-black/90 p-2 shadow-lg backdrop-blur-md"
                 >
                   {links.map((link) => (
                     <HeadlessMenu.Item key={link.href}>
                       {({ active }) => (
                         <Link
                           href={link.href}
-                          className={`block px-4 py-2 text-xs font-semibold rounded-md ${
+                          className={`block rounded-md px-4 py-2 text-xs font-semibold ${
                             active
                               ? "bg-white/10 text-yellow-200"
                               : "text-white"
