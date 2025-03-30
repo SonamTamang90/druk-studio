@@ -1,9 +1,28 @@
 import Container from "@/components/Container";
 import Link from "next/link";
 
+const features = [
+  {
+    letter: "R",
+    title: "Responsive",
+    description: `Components that automatically resize and reorganize for all screen sizes.`,
+  },
+  {
+    letter: "A",
+    title: "Accessibility",
+    description: `Inclusive components ensuring equal access for all users and assistive technologies.`,
+  },
+  {
+    letter: "S",
+    title: "Seo Optimized",
+    description: `Inclusive components ensuring equal access for all users and assistive technologies.`,
+  },
+];
+
 const Hero: React.FC = () => {
   return (
-    <section className="h-screen bg-[url(/images/hero-bg.png)] bg-cover bg-center">
+    <section className="relative h-screen bg-[url(/images/hero-bg.png)] bg-cover bg-center">
+      <div className="absolute inset-0 bg-[url(/bg-noise.png)] opacity-10" />
       <Container>
         <div className="flex h-full flex-col items-center justify-center">
           <div className="mb-1 rounded-full border border-white/15 px-1.5 py-1">
@@ -43,11 +62,35 @@ const Features: React.FC = () => {
         <h2 className="max-w-md text-xl font-semibold text-white lg:text-3xl">
           Professional UI Components Built for Real-World Success
         </h2>
-        <p className="mt-6 max-w-md text-zinc-400">
+        <p className="mt-6 mb-11 max-w-md text-zinc-400">
           A library with 50+ UI components to meet any website design and
           development need.
         </p>
       </Container>
+      {/* Features */}
+      <div className="border-neutrals-100/5 border-y py-11">
+        <Container>
+          <div className="grid grid-cols-3 gap-11">
+            {features.map((feature) => (
+              <div key={feature.letter} className="">
+                <div className="relative mb-6">
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent">
+                    {feature.letter}
+                  </span>
+                  <div className="absolute bottom-2 left-2.5 text-xl">
+                    <h3 className="ml-1 text-sm font-semibold text-white uppercase">
+                      {feature.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-sm text-balance text-zinc-400">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </div>
     </section>
   );
 };

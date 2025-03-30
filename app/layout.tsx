@@ -27,13 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${geistMono.variable} min-h-screen bg-[#0F0F0F] antialiased`}
+        className={`${inter.variable} ${geistMono.variable} relative min-h-screen bg-[#0F0F0F] antialiased`}
       >
         {/* Decorative grid lines */}
         <div className="bg-neutrals-100/5 fixed left-8 z-10 h-full w-px md:left-11" />
         <div className="bg-neutrals-100/5 fixed right-8 z-10 h-full w-px md:right-11" />
         <Navbar />
-        <main>{children}</main>
+        <main className="relative">{children}</main>
         <Footer />
       </body>
     </html>

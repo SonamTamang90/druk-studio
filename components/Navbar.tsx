@@ -39,7 +39,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-6 left-0 flex w-full justify-center">
+    <nav className="fixed top-6 left-0 z-50 flex w-full justify-center">
       {/* Desktop Navigation */}
       <div
         className={`border-neutrals-100/15 hidden rounded-md border bg-transparent px-3 md:flex ${isScrolled ? "backdrop-blur-sm" : ""}`}
@@ -67,7 +67,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/sign-in"
-              className="bg-brand inline-block rounded-md px-3 py-2 text-xs font-semibold text-black uppercase transition-opacity hover:opacity-90"
+              className="inline-block rounded-md bg-white px-3 py-2 text-xs font-semibold text-black uppercase transition-opacity hover:opacity-90"
             >
               Get Full Access
             </Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
               <MenuItem>
                 <Link
                   href="/sign-in"
-                  className="bg-brand inline-block rounded-md px-3 py-2 text-center text-xs font-semibold text-black uppercase transition-opacity hover:opacity-90"
+                  className="inline-block rounded-md bg-white px-3 py-2 text-center text-xs font-semibold text-black uppercase transition-opacity hover:opacity-90"
                 >
                   Get Full Access
                 </Link>
