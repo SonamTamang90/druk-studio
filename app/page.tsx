@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import GridContainer from "@/components/GridContainer";
 import Link from "next/link";
 
 const features = [
@@ -68,11 +69,12 @@ const Features: React.FC = () => {
         </p>
       </Container>
       {/* Features */}
-      <div className="border-neutrals-100/5 border-y py-11">
+      <div className="border-neutrals-100/5 relative border-y py-11">
+        <GridContainer />
         <Container>
-          <div className="grid grid-cols-3 gap-11">
+          <div className="grid grid-cols-3 gap-x-11">
             {features.map((feature) => (
-              <div key={feature.letter} className="">
+              <div key={feature.letter} className="px-4 last:pl-8">
                 <div className="relative mb-6">
                   <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent">
                     {feature.letter}
