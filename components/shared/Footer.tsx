@@ -142,7 +142,7 @@ const Footer = () => {
         </div>
       </Container>
       <div className="border-t border-white/5 py-11">
-        <Container>
+        <Container className="px-11">
           <div className="flex flex-col items-center justify-between space-y-8 md:flex-row md:space-y-0">
             <p className="text-sm text-zinc-400">
               All right reserved &copy; 2024{" "}

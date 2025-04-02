@@ -1,9 +1,12 @@
+"use client";
+
 import Container from "@/components/layouts/Container";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import Button from "@/components/ui/Button";
 import { Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const features = [
   {
@@ -231,7 +234,7 @@ const FeatureSection = () => {
 const TestimonialsSection = () => {
   return (
     <section className="lg:pt-11 lg:pb-24">
-      <Container className="px-8">
+      <Container className="px-6">
         <h2 className="mb-24 text-center text-2xl font-bold text-white capitalize">
           ❤️ Trusted by Creators
         </h2>
@@ -254,7 +257,7 @@ const PricingSection = () => {
     <div className="flex items-center justify-center px-6 pb-11">
       <div className="mx-auto w-full max-w-6xl">
         <div className="pb-24">
-          <h2 className="text-center text-2xl font-bold text-white capitalize uppercase">
+          <h2 className="text-center text-2xl font-bold text-white capitalize">
             Choose the plan that's right for you
           </h2>
         </div>
@@ -341,6 +344,50 @@ const PricingSection = () => {
   );
 };
 
+const ContactSection = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <section className="relative overflow-hidden pt-11 pb-24">
+      <div className="mx-auto flex flex-col items-center justify-center px-11">
+        <h2 className="mx-auto mb-24 max-w-md text-center text-2xl font-semibold text-white">
+          Need custom UI blocks? Contact us.
+        </h2>
+
+        <div className="relative">
+          {/* Large, very subtle ambient glow - always present */}
+          <div
+            className="absolute top-1/2 left-1/2 -z-10 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(183,201,83,0.25) 0%, rgba(157,175,47,0.15) 40%, rgba(101,114,35,0.05) 70%, rgba(0,0,0,0) 100%)",
+            }}
+          />
+
+          {/* Subtle glow animation on hover */}
+          <div
+            className={`absolute top-1/2 left-1/2 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl transition-opacity duration-700 ${
+              isHovered ? "opacity-40" : "opacity-20"
+            }`}
+            style={{
+              background:
+                "radial-gradient(circle, rgba(202,220,88,0.3) 0%, rgba(170,184,60,0.15) 50%, rgba(134,151,33,0.05) 75%, rgba(0,0,0,0) 100%)",
+            }}
+          />
+
+          {/* Button */}
+          <button
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="relative z-10 cursor-pointer rounded-md border border-[#070707] bg-gradient-to-b from-[#D7D794] to-[#F6FF7F] px-6 py-4 text-xs font-medium tracking-wide uppercase transition-all duration-300 sm:px-10 sm:py-5 sm:text-sm md:px-11 md:py-4 md:text-base"
+          >
+            Get in Touch
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Home = () => {
   return (
     <>
@@ -348,6 +395,7 @@ const Home = () => {
       <FeatureSection />
       <TestimonialsSection />
       <PricingSection />
+      <ContactSection />
     </>
   );
 };
