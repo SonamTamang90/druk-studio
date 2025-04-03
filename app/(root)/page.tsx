@@ -98,23 +98,23 @@ const testimonials = [
 
 const Hero = () => {
   return (
-    <section className="h-[75lvh] bg-[url(/images/hero-bg.png)] bg-cover bg-center md:h-lvh">
-      <div className="flex h-full flex-col items-center justify-center space-y-11">
+    <section className="bg-hero h-[75lvh] bg-cover bg-center md:h-lvh">
+      <Container className="flex h-full flex-col justify-center px-11">
         {/* Hero text */}
-        <div className="max-w-xl text-center">
+        <div className="mb-11 max-w-xl">
           <span className="mb-1 inline-block rounded-full border border-white/15 px-2 py-1 text-xs text-zinc-200">
             Made by Druk Digital
           </span>
           <h1 className="text-5xl font-extrabold tracking-wide text-white lg:text-7xl">
-            Ship design even faster
+            Build design even faster
           </h1>
-          <p className="mt-6 px-11 text-base text-zinc-200">
+          <p className="mt-6 max-w-md text-lg text-zinc-400">
             Our comprehensive toolkit helps developers build stunning interfaces
             and websites in record time.
           </p>
         </div>
         {/* Hero CTA */}
-        <div className="flex items-center justify-center space-x-6">
+        <div className="flex space-x-6">
           <Button variant="primary" href="/ui-blocks">
             Browse UI Blocks
           </Button>
@@ -122,7 +122,7 @@ const Hero = () => {
             Explore Templates
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
@@ -170,13 +170,6 @@ const FeatureSection = () => {
         </p>
       </div>
       <div className="relative border-b border-white/5">
-        <div className="pointer-events-none absolute inset-0 z-10 px-4 sm:px-8">
-          <div className="mx-auto flex h-full max-w-7xl gap-[14px]">
-            <div className="flex-1 border-r border-white/5 sm:block" />
-            <div className="hidden flex-1 border-x border-white/5 sm:block" />
-            <div className="hidden flex-1 border-l border-white/5 lg:block" />
-          </div>
-        </div>
         <Container className="relative px-8">
           <ul
             role="list"

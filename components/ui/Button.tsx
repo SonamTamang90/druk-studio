@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   const baseStyles =
-    "inline-block text-sm text-center rounded-md transition-opacity hover:opacity-75  focus:outline-none cursor-pointer";
+    "text-sm text-center rounded-md transition-opacity hover:opacity-75  focus:outline-none cursor-pointer";
 
   const sizeStyles = {
     sm: "px-3 py-1.5",

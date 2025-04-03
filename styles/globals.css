@@ -1,12 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 
 @theme {
+  /* Font family */
+  --font-sans: "Inter", sans-serif;
+
+  /* Background image */
+  --background-image-hero: url("/images/hero-bg.png");
+
+  /* Primary colors */
   --color-brand: #ffffa9;
 
+  /* Light colors */
   --color-neutrals-100: #d9d9d9;
   --color-neutrals-300: #cfcfcf;
-}
+  --color-light-100: #e5e7eb;
 
-.bg-white-4-percent {
-  background-color: color-mix(in srgb, white 4%, transparent);
+  /* Dark colors */
+  --color-dark-900: #0a0a0a;
+  --color-dark-700: #121212;
+  --color-dark-400: #262626;
+  --color-dark-200: #a3a3a3;
 }
