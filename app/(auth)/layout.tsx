@@ -6,20 +6,7 @@ const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main className="bg-hero flex min-h-screen items-center justify-center bg-cover bg-center">
       <section className="rounded-md border border-white/5 bg-zinc-900 px-8 py-10 shadow sm:min-w-[520px]">
-        <div className="mb-6 flex items-center justify-between">
-          <div className="space-y-2.5">
-            <h1 className="text-2xl font-bold text-white">Sign In</h1>
-            <p className="text-white/40">
-              Sign into your Druk UI account below.
-            </p>
-          </div>
-          <Image
-            width={50}
-            height={50}
-            src="/images/logo.png"
-            alt="Druk Digital Logo"
-          />
-        </div>
+        {children}
         <div className="relative">
           <div
             aria-hidden="true"
@@ -32,7 +19,6 @@ const AuthLayout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
         <SocialAuthForm />
-        {children}
       </section>
     </main>
   );

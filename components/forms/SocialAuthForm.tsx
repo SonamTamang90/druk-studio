@@ -37,7 +37,7 @@ const SocialAuthForm = () => {
           alt="Github logo"
           width={20}
           height={20}
-          className="invert"
+          className="object-contain invert"
         />
         <span>Sign in with Github</span>
       </Button>
@@ -52,7 +52,7 @@ const SocialAuthForm = () => {
           alt="Github logo"
           width={20}
           height={20}
-          className=""
+          className="object-contain"
         />
         <span>Sign in with Google</span>
       </Button>
