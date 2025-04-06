@@ -1,14 +1,14 @@
-import Footer from "@/components/shared/Footer";
-import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/Header";
 import { ReactNode } from "react";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="">
-      <Navbar />
-      <main>{children}</main>
+    <>
+      <Header />
+      <main className="min-h-screen">{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

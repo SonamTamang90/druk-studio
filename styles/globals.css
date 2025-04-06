@@ -7,19 +7,20 @@
   --font-sans: "Inter", sans-serif;
 
   /* Background image */
-  --background-image-hero: url("/images/hero-bg.png");
+  --background-image-hero: url("/images/hero.png");
 
   /* Primary colors */
   --color-brand: #ffffa9;
+  --color-brand-500: "#F6FF7F";
 
   /* Light colors */
-  --color-neutrals-100: #d9d9d9;
-  --color-neutrals-300: #cfcfcf;
   --color-light-100: #e5e7eb;
+  --color-light-200: #d9d9d9;
+  --color-light-300: #cfcfcf;
+  --color-light-400: #a3a3a3;
 
   /* Dark colors */
   --color-dark-900: #0a0a0a;
   --color-dark-700: #121212;
   --color-dark-400: #262626;
-  --color-dark-200: #a3a3a3;
 }

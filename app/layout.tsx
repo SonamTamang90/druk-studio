@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import GridLines from "@/components/layouts/GridLines";
-import { Toaster } from "react-hot-toast";
 import { ReactNode } from "react";
-import { SessionProvider } from "next-auth/react";
-import { auth } from "@/auth";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,20 +16,13 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = async ({ children }: { children: ReactNode }) => {
-  const session = await auth();
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <SessionProvider session={session}>
-      <html lang="en">
-        <body
-          className={`${inter.variable} bg-dark-900 relative min-h-screen text-sm antialiased`}
-        >
-          <GridLines />
-          {children}
-          <Toaster position="top-right" />
-        </body>
-      </html>
-    </SessionProvider>
+    <html lang="en">
+      <body className={`${inter.variable} bg-dark-900 text-sm antialiased`}>
+        {children}
+      </body>
+    </html>
   );
 };
 
