@@ -1,5 +1,6 @@
 import ComponentCard from "@/components/cards/ComponentCard";
 import CenteredFaq from "@/components/faq/CenteredFaq";
+import GridContainer from "@/components/layouts/GridContainer";
 import Link from "next/link";
 
 const components = [
@@ -170,8 +171,8 @@ const Components = () => {
         </p>
       </div>
       <div className="border-light-100/5 -mb-px border-y">
-        <div className="mx-auto max-w-7xl px-8 lg:px-11">
-          <div className="border-light-100/5 grid grid-cols-1 border-l lg:grid-cols-3">
+        <div className="max-auto max-w-7xl px-8 lg:px-11">
+          <GridContainer>
             {components.map(({ _id, name, number, image }) => (
               <ComponentCard
                 key={_id}
@@ -181,7 +182,7 @@ const Components = () => {
                 image={image}
               />
             ))}
-          </div>
+          </GridContainer>
         </div>
       </div>
     </section>
