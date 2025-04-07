@@ -8,8 +8,10 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import { ChevronDown, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const MobileNavItem = ({
   href,
@@ -29,7 +31,7 @@ const MobileNavItem = ({
 
 const MobileNavigation = () => {
   return (
-    <Popover className="pointer-events-auto pr-11 md:hidden">
+    <Popover className="pointer-events-auto md:hidden">
       <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDown className="ml-3 h-auto w-5 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
@@ -91,24 +93,61 @@ const DesktopNavigation = () => {
             {label}
           </NavItem>
         ))}
-
-        <Link
-          href="/sign-up"
-          className="bg-light-300 inline-block rounded-full px-2 py-1 transition-opacity hover:opacity-75"
-        >
-          Get Access
-        </Link>
       </ul>
     </nav>
   );
 };
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="fixed top-11 left-0 w-full">
-      <div className="flex flex-1 justify-end md:justify-center">
-        <DesktopNavigation />
-        <MobileNavigation />
+    <header className="fixed top-0 left-0 z-50 w-full pt-6">
+      <div className="mx-auto max-w-7xl px-8 lg:px-11">
+        <div className="flex gap-4">
+          {/* Logo */}
+          <div
+            className={`flex flex-1 ${isScrolled ? "opacity-0" : "opacity-100"} transition-opacity`}
+          >
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                width={40}
+                height={40}
+                src="/images/logo.png"
+                alt="Brand logo"
+              />
+              <span className="text-light-100 text-lg font-bold">Druk UI</span>
+            </Link>
+          </div>
+
+          <div className="flex flex-1 justify-end md:justify-center">
+            <MobileNavigation />
+            <DesktopNavigation />
+          </div>
+          <div className="flex justify-end md:flex-1">
+            <div className="pointer-events-auto">
+              <Link
+                href="https://github.com/SonamTamang90/druk-ui"
+                target="_blank"
+              >
+                <Image
+                  width={24}
+                  height={24}
+                  src="/icons/github.svg"
+                  alt="Github Logo"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );

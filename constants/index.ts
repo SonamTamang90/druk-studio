@@ -12,7 +12,7 @@ export const mainLinks = [
     label: "Templates",
   },
   {
-    route: "/sign-in",
-    label: "Sign In",
+    route: "/faq",
+    label: "FAQ",
   },
 ];

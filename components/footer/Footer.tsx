@@ -10,10 +10,6 @@ const links = [
     label: "Templates",
     href: "/templates",
   },
-  {
-    label: "Sign In",
-    href: "/sign-in",
-  },
 ];
 
 const legals = [
@@ -59,10 +55,6 @@ const services = [
     name: "Web Development",
     href: "/",
   },
-  {
-    name: "UI/UX",
-    href: "/",
-  },
 ];
 
 const Footer = () => {
@@ -79,7 +71,7 @@ const Footer = () => {
                 alt="Brand logo"
               />
               <span className="text-base font-semibold text-white">
-                Druk <br /> Digital
+                Druk UI
               </span>
             </Link>
             <p className="text-zinc-400">
@@ -125,7 +117,7 @@ const Footer = () => {
           </div>
           <div className="lg:pl-11">
             <h3 className="mb-4 text-sm font-semibold text-white uppercase md:mb-6">
-              Our Services
+              Services
             </h3>
             <ul className="flex flex-col space-y-4">
               {services.map((service) => (
@@ -145,9 +137,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between space-y-8 md:flex-row md:space-y-0">
             <p className="text-sm text-zinc-400">
               All right reserved &copy; 2024{" "}
-              <span className="font-semibold text-white">
-                Druk Digital Studio.
-              </span>
+              <span className="font-semibold text-white">Druk UI</span>
             </p>
 
             <div className="flex items-center gap-6">

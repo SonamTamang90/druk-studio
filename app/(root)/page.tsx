@@ -1,6 +1,5 @@
 import ComponentCard from "@/components/cards/ComponentCard";
 import CenteredFaq from "@/components/faq/CenteredFaq";
-import Image from "next/image";
 import Link from "next/link";
 
 const components = [
@@ -83,16 +82,16 @@ const Hero = () => {
         </div>
         <div className="mt-11 space-x-6">
           <Link
-            href="/templates"
+            href="/components"
             className="bg-brand inline-block rounded-md px-6 py-3 font-semibold transition-opacity hover:opacity-75"
           >
-            Buy License
+            Explore Components
           </Link>
           <Link
             href="/templates"
             className="bg-dark-400 border-light-300/15 inline-block rounded-md border px-6 py-3 font-semibold text-white transition-opacity hover:opacity-75"
           >
-            Explore Components
+            Browse Templates
           </Link>
         </div>
       </div>
@@ -165,7 +164,7 @@ const Feature = () => {
 const Components = () => {
   return (
     <section className="lg:pb-20">
-      <div className="border-light-100/5 border-t px-8 py-4 lg:px-11">
+      <div className="border-light-400 dark:border-light-100/5 border-t px-8 py-4 lg:px-11">
         <p className="text-light-400">
           UI Components for Marketing, Applications and Ecommerce
         </p>
