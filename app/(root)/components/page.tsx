@@ -48,10 +48,17 @@ const components = [
   },
   {
     _id: "7",
-    name: "Form",
+    name: "Team Sections",
     number: "3",
-    image: "/mockups/testimonial.png",
-    collection: "Marketing",
+    image: "/mockups/team.png",
+    collection: "Application",
+  },
+  {
+    _id: "8",
+    name: "Footer",
+    number: "4",
+    image: "/mockups/footer.png",
+    collection: "Application",
   },
 ];
 
