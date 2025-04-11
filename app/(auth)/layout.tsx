@@ -1,5 +1,7 @@
-const layout = () => {
-  return <div>layout</div>;
+import React from "react";
+
+const AuthLayout = () => {
+  return <div>AuthLayout</div>;
 };
 
-export default layout;
+export default AuthLayout;

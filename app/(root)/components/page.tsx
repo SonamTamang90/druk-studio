@@ -10,6 +10,7 @@ const components = [
     number: "5",
     image: "/mockups/hero.png",
     collection: "Application",
+    href: "/components/applications/hero-sections",
   },
   {
     _id: "2",
@@ -93,23 +94,24 @@ const Components = async ({ searchParams }: SearchParams) => {
     return matchesFilter;
   });
   return (
-    <>
+    <div className="min-h-screen">
       <Banner />
       <ComponentFilter />
-      <Container>
+      <div className="">
         <GridContainer>
-          {filteredComponents.map(({ _id, name, number, image }) => (
+          {filteredComponents.map(({ _id, name, number, image, href }) => (
             <ComponentCard
               key={_id}
               _id={_id}
               name={name}
               number={number}
               image={image}
+              href={href}
             />
           ))}
         </GridContainer>
-      </Container>
-    </>
+      </div>
+    </div>
   );
 };
 

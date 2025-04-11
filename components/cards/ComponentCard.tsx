@@ -6,12 +6,13 @@ interface Props {
   name: string;
   number: string;
   image: string;
+  href?: string;
 }
 
-const ComponentCard = ({ _id, name, number, image }: Props) => {
+const ComponentCard = ({ _id, name, number, image, href }: Props) => {
   return (
     <li className="border-light-100/5 group cursor-pointer overflow-hidden border-r border-b p-4">
-      <Link href={`/components/${name}`} className="">
+      <Link href={`${href}`} className="">
         <Image
           src={image}
           alt={name}
